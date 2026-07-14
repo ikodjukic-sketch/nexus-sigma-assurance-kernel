@@ -1,0 +1,66 @@
+schema_version: "1.0"
+policy_id: "NEXUS-SIGMA-FAIL-CLOSED-001"
+title: "Owner-Bound Fail-Closed Assurance Policy"
+status: "PUBLIC_REFERENCE"
+author: "Ilija Djukic"
+human_final_required: true
+
+principle:
+  statement: >
+    No regulatory, technical, security, compliance or assurance claim
+    may advance beyond the evidence-supported state.
+
+rules:
+  - rule_id: "FC-001"
+    condition: "decision_owner_missing"
+    result: "HOLD"
+    reason: "No accountable decision owner has been identified."
+
+  - rule_id: "FC-002"
+    condition: "required_evidence_missing"
+    result: "NO_CLAIM"
+    reason: "The claim is not supported by sufficient evidence."
+
+  - rule_id: "FC-003"
+    condition: "mandate_missing"
+    result: "NO_COMMITMENT"
+    reason: "No verified mandate exists for the proposed commitment."
+
+  - rule_id: "FC-004"
+    condition: "execution_capability_missing"
+    result: "NO_EXECUTION"
+    reason: "Required operational capability has not been demonstrated."
+
+  - rule_id: "FC-005"
+    condition: "human_final_approval_missing"
+    result: "NO_EXTERNAL_RELEASE"
+    reason: "Human-final approval is mandatory before external release."
+
+  - rule_id: "FC-006"
+    condition: "revalidation_missing"
+    result: "OPEN"
+    reason: "Corrective action has not been independently revalidated."
+
+  - rule_id: "FC-007"
+    condition: "closure_record_missing"
+    result: "OPEN"
+    reason: "A case cannot be closed without a closure record."
+
+closure_requirements:
+  - "requirement_id"
+  - "source_and_scope"
+  - "implementation_test"
+  - "evidence_reference"
+  - "decision_owner"
+  - "validation_result"
+  - "corrective_action_if_required"
+  - "revalidation_result"
+  - "closure_record"
+  - "integrity_hash"
+
+prohibited_inferences:
+  - "certification"
+  - "regulatory_approval"
+  - "institutional_endorsement"
+  - "completed_validation"
+  - "partnership"
