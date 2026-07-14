@@ -1,0 +1,64 @@
+schema_version: "1.0"
+case_id: "NEXUS-SIGMA-CASE-001"
+title: "PQC readiness claim without sufficient evidence"
+case_type: "SYNTHETIC_REFERENCE"
+status: "OPEN"
+
+claim:
+  statement: "The organization is post-quantum ready."
+  claim_owner: null
+  scope: "Enterprise cryptographic environment"
+
+required_evidence:
+  - id: "E-001"
+    description: "Complete cryptographic asset inventory"
+    received: false
+
+  - id: "E-002"
+    description: "Named decision owner for PQC migration"
+    received: false
+
+  - id: "E-003"
+    description: "Approved migration roadmap and deadlines"
+    received: false
+
+  - id: "E-004"
+    description: "Validation results for implemented controls"
+    received: false
+
+validation:
+  owner_present: false
+  sufficient_evidence: false
+  implementation_test_passed: false
+  revalidation_completed: false
+  closure_record_present: false
+
+decision:
+  primary_result: "NO_CLAIM"
+  secondary_results:
+    - "HOLD"
+    - "OPEN"
+  rationale:
+    - "No accountable decision owner has been identified."
+    - "Required evidence is missing."
+    - "No implementation validation has been completed."
+    - "No closure record exists."
+
+corrective_actions:
+  - action: "Create and validate a cryptographic asset inventory."
+    owner: "TO_BE_ASSIGNED"
+    deadline: "TO_BE_DEFINED"
+
+  - action: "Assign an accountable PQC migration owner."
+    owner: "EXECUTIVE_DECISION_REQUIRED"
+    deadline: "TO_BE_DEFINED"
+
+  - action: "Approve a risk-based migration roadmap."
+    owner: "TO_BE_ASSIGNED"
+    deadline: "TO_BE_DEFINED"
+
+closure_condition:
+  statement: >
+    This case may be marked CLOSED only after required evidence,
+    implementation validation, corrective action, revalidation,
+    human-final approval and an integrity-protected closure record.
