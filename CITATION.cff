@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use or reference this work, please cite it using the metadata below."
+title: "NEXUS-σ Assurance Kernel"
+type: software
+authors:
+  - family-names: "Đukić"
+    given-names: "Ilija"
+    orcid: "https://orcid.org/0009-0007-8843-5568"
+version: "1.0.0"
+date-released: "2026-07-14"
+abstract: >
+  Owner-bound evidence and closure kernel for AI, cybersecurity,
+  post-quantum cryptography and standards assurance.
+keywords:
+  - AI governance
+  - cybersecurity
+  - post-quantum cryptography
+  - standards assurance
+  - evidence architecture
+  - owner mapping
+  - validation
+  - closure
+repository-code: "https://github.com/ikodjukic-sketch/nexus-sigma-assurance-kernel"
+license: "LicenseRef-Proprietary"
